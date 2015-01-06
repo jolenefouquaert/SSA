@@ -1,0 +1,45 @@
+﻿@model ITBedrijfProject.PresentationModels.PMRegister
+
+
+@{
+    ViewBag.Title = "NewRegister";
+}
+
+<h2>Nieuwe kassa toevoegen</h2>
+<p>Hier kan u een nieuwe kassa toevoegen, gelieve steeds alles in te vullen.</p>
+
+@using (Html.BeginForm("NewRegister", "Kassa", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table class="table">
+        <tr>
+            <td>@Html.LabelFor(a => a.RegisterName)</td>
+            <td>@Html.TextBoxFor(a => a.RegisterName, new { placeholder = Html.DisplayNameFor(a => a.RegisterName) } )</td>
+            @Html.ValidationMessageFor(a => a.RegisterName)
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.Device)</td>
+            <td>@Html.TextBoxFor(a => a.Device, new { placeholder = Html.DisplayNameFor(a => a.Device) })</td>
+            @Html.ValidationMessageFor(a => a.Device)
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.PurchaseDate)</td>
+            <td><input class="form-control" type="date" value="@DateTime.Today" id="PurchaseDate" name="PurchaseDate" min="@DateTime.Today.Year-@DateTime.Today.Month-@DateTime.Today.Day" /></td>
+            <td><input class="form-control"  type="time" value="@DateTime.Today" id="PurchaseTime" name="PurchaseTime" /></td>
+            @Html.ValidationMessageFor(a => a.PurchaseDate)
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.ExpiresDate)</td>
+            <td><input class="form-control"  type="date" value="@DateTime.Today" id="ExpiresDate" name="ExpiresDate" min="@DateTime.Today.AddDays(1).Year-@DateTime.Today.AddDays(1).Month-@DateTime.Today.AddDays(1).Day" /></td>
+            <td><input class="form-control"  type="time" value="@DateTime.Today" id="ExpiresTime" name="ExpiresTime" /></td>
+            @Html.ValidationMessageFor(a => a.ExpiresDate)
+        </tr>
+        <tr>
+            <td>
+                <a href="/Kassa/Index">
+                    <input class="btn btn-default" type="button" value="Back" />
+                </a>
+            </td>
+            <td><input class="btn btn-default" type="submit" value="Create" /></td>
+        </tr>
+    </table>
+}

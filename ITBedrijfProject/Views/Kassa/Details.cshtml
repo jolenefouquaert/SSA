@@ -1,0 +1,35 @@
+﻿@model ITBedrijfProject.Models.Register
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details Kassa</h2>
+
+@using (Html.BeginForm("Index", "Kassa", FormMethod.Post))
+{
+    @Html.HiddenFor(a => a.Id);
+
+    <table class="table">
+        <tr>
+            <td>@Html.LabelFor(a => a.RegisterName)</td>
+            <td>@Html.ValueFor(a => a.RegisterName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.Device)</td>
+            <td>@Html.ValueFor(a => a.Device)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.PurchaseDate)</td>
+            <td>@Html.ValueFor(a => a.PurchaseDate)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.ExpiresDate)</td>
+            <td>@Html.ValueFor(a => a.ExpiresDate)</td>
+        </tr>
+
+    </table>
+
+                
+        <input class="btn-default" type="submit" name="Back" value="Terug" />
+}

@@ -1,0 +1,26 @@
+﻿@model ITBedrijfProject.PresentationModels.PMOrganisationRegister
+<h2>@ViewBag.Organisation.OrganisationName</h2>
+<h3>Aanpassen kassa van de organistatie</h3>
+@using (Html.BeginForm("EditRegister", "Vereniging", FormMethod.Post))
+{
+    <input class="form-control" type="hidden" name="oldOrganisationID" id="oldOrganisationID" value="@ViewBag.oldId" />
+    @Html.HiddenFor(a => a.RegisterID)
+    @Html.HiddenFor(a => a.FromDate)
+    @Html.HiddenFor(a => a.UntilDate)
+    <table class="table">
+        <tr>
+            <td>@Html.LabelFor(a => a.OrganisationName)</td>
+            <td>@Html.DropDownListFor(a => a.OrganisationID, Model.NewOrganisation)</td>
+            <td>@Html.ValidationMessageFor(a => a.OrganisationID)</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/Vereniging/Index">
+                    <input class="btn-default" type="button" value="Back" />
+                </a>
+            </td>
+            <td><input class="btn-default" type="submit" value="Save" /></td>
+
+        </tr>
+    </table>
+}

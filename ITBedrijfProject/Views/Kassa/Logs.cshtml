@@ -1,0 +1,30 @@
+﻿@model ITBedrijfProject.Models.Errorlog
+
+@{
+    ViewBag.Title = "Logs";
+}
+<h2>@ViewBag.Register.RegisterName</h2>
+<h3>Logs</h3>
+
+@using (Html.BeginForm("Index", "Kassa", FormMethod.Post))
+{
+    <table class="table">
+        <tr>
+            <td >@Html.LabelFor(a => a.Timestamp)</td>
+            <td >@Html.LabelFor(a => a.Message)</td>
+            <td >@Html.LabelFor(a => a.Stacktrace)</td>
+        </tr>
+        @foreach (var item in @ViewBag.Log)
+        {
+            <tr>
+                <td>@item.Timestamp</td>
+                <td>@item.Message</td>
+                <td>@item.Stacktrace</td>
+            </tr>
+        }
+    </table>
+
+    
+    <input class="btn-default" type="submit" name="Back" value="Terug" />
+}
+
