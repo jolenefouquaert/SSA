@@ -10,28 +10,27 @@
 
     <table class="table">
         <tr>
-            <td>@Html.LabelFor(a => a.RegisterName)</td>
+            <th>Kassa Naam</th>
             <td>@Html.ValueFor(a => a.RegisterName)</td>
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.Device)</td>
+            <th>Toestel</th>
             <td>@Html.ValueFor(a => a.Device)</td>
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.PurchaseDate)</td>
+            <th>Aankoopdatum</th>
             <td>@Html.ValueFor(a => a.PurchaseDate)</td>
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.ExpiresDate)</td>
+            <th>Verloopdatum</th>
             <td>@Html.ValueFor(a => a.ExpiresDate)</td>
         </tr>
-        <tr>
-            <td>
-                <a href="/Kassa/Index">
-                    <input class="btn-default" type="button" value="Terug" />
-                </a>
-            </td>
-            <td><input class="btn-default" type="submit" value="Verwijder" /></td>
-        </tr>
     </table>
+        
+                <a href="/Kassa/Index">
+                    <input class="btn-default" type="button" value="Terug" /></a>
+           
+          <input class="btn-default" type="submit" value="Verwijder" />
+        
+   
 }

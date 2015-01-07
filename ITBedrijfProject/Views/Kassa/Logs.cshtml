@@ -10,9 +10,9 @@
 {
     <table class="table">
         <tr>
-            <td >@Html.LabelFor(a => a.Timestamp)</td>
-            <td >@Html.LabelFor(a => a.Message)</td>
-            <td >@Html.LabelFor(a => a.Stacktrace)</td>
+            <th>Tijdstip</th>
+            <th>Bericht</th>
+            <th>Stacktrace</th>
         </tr>
         @foreach (var item in @ViewBag.Log)
         {

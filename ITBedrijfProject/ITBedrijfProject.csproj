@@ -264,6 +264,8 @@
     <Content Include="Views\Kassa\Index.cshtml" />
     <Content Include="Views\Kassa\Logs.cshtml" />
     <Content Include="Views\Kassa\NewRegister.cshtml" />
+    <Content Include="Views\Vereniging\ErrorLogin.cshtml" />
+    <Content Include="Views\Home\ErrorLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

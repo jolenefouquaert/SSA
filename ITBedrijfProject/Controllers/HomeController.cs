@@ -26,5 +26,9 @@ namespace ITBedrijfProject.Controllers
 
             return View();
         }
+        public ActionResult ErrorLogin()
+        {
+            return View();
+        }
     }
 }

@@ -8,10 +8,10 @@
 {
     <table class="table">
         <tr>
-            <th>Persoonlijke Gegevens</th>
+            <th><h3>Persoonlijke Gegevens</h3></th>
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.OrganisationName)</td>
+            <th>Naam Organisatie</th>
             <td>@Html.TextBoxFor(a => a.OrganisationName, new { placeholder = Html.DisplayNameFor(a => a.OrganisationName) })</td>
             @Html.ValidationMessageFor(a => a.OrganisationName)
         </tr>
@@ -21,17 +21,17 @@
             @Html.ValidationMessageFor(a => a.Login)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.Password)</td>
+            <th>Wachtwoord</th>
             <td>@Html.PasswordFor(a => a.Password, new { placeholder = Html.DisplayNameFor(a => a.Password) })</td>
             @Html.ValidationMessageFor(a => a.Password)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.ControlPassword)</td>
+            <th>Controle Wachtwoord</th>
             <td>@Html.PasswordFor(a => a.ControlPassword, new { placeholder = Html.DisplayNameFor(a => a.ControlPassword) })</td>
             @Html.ValidationMessageFor(a => a.ControlPassword)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.Address)</td>
+            <th>Adres</th>
             <td>@Html.TextBoxFor(a => a.Address, new { placeholder = Html.DisplayNameFor(a => a.Address) })</td>
             @Html.ValidationMessageFor(a => a.Address)
         </tr>
@@ -41,12 +41,12 @@
             @Html.ValidationMessageFor(a => a.Email)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.Phone)</td>
+            <th>Telefoonnummer</th>
             <td>@Html.TextBoxFor(a => a.Phone, new { placeholder = Html.DisplayNameFor(a => a.Phone) })</td>
             @Html.ValidationMessageFor(a => a.Phone)
         </tr>
         <tr>
-            <th>Database Gegevens</th>
+            <th><h3>Database Gegevens</h3></th>
         </tr>
         <tr>
             <td>@Html.LabelFor(a => a.DbLogin)</td>
@@ -54,7 +54,7 @@
             @Html.ValidationMessageFor(a => a.DbLogin)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.DbName)</td>
+            <th>Naam database</th>
             <td>@Html.TextBoxFor(a => a.DbName, new { placeholder = Html.DisplayNameFor(a => a.DbName) })</td>
             @Html.ValidationMessageFor(a => a.DbName)
         </tr>
@@ -68,16 +68,12 @@
             <td>@Html.PasswordFor(a => a.DbControlPassword, new { placeholder = Html.DisplayNameFor(a => a.DbControlPassword) })</td>
             @Html.ValidationMessageFor(a => a.DbControlPassword)
         </tr>
-        <tr>
-            <td>
-                <a href="/Vereniging/Index">
-                    <input class="btn-default" type="button" value="Back" />
-                </a>
-            </td>
-            <td><input class="btn-default" type="submit" value="Create" /></td>
 
-        </tr>
     </table>
+                <a href="/Vereniging/Index"><input class="btn btn-default"  type="button" value="Back" />
+                </a><input class="btn btn-default" type="submit" value="Create" />
+
+
 
 
 }

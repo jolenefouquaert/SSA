@@ -203,7 +203,13 @@ namespace ITBedrijfProject.Controllers
            return RedirectToAction("Index");
 
 
-      }
+      
+     }
+
+        public ActionResult ErrorLogin()
+      {
+          return View();
+        }
 
     }
 }

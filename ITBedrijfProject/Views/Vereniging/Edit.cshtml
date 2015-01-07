@@ -11,30 +11,30 @@
     @Html.HiddenFor(a => a.Id);
     <table>
         <tr>
-            <th>Persoonlijke Gegevens</th>
+            <th><h3>Persoonlijke Gegevens</h3></th>
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.OrganisationName)</td>
+            <th>Naam Organisatie</th>
             <td>@Html.TextBoxFor(a => a.OrganisationName)</td>
             @Html.ValidationMessageFor(a => a.OrganisationName)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.Login)</td>
+            <th>@Html.LabelFor(a => a.Login)</th>
             <td>@Html.TextBoxFor(a => a.Login)</td>
             @Html.ValidationMessageFor(a => a.Login)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.Password)</td>
+            <th>Wachtwoord</th>
             <td>@Html.PasswordFor(a => a.Password)</td>
             @Html.ValidationMessageFor(a => a.Password)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.ControlPassword)</td>
+            <th>Controle Wachtwoord</th>
             <td>@Html.PasswordFor(a => a.ControlPassword)</td>
             @Html.ValidationMessageFor(a => a.ControlPassword)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.Address)</td>
+            <th>Adres</th>
             <td>@Html.TextBoxFor(a => a.Address)</td>
             @Html.ValidationMessageFor(a => a.Address)
         </tr>
@@ -44,16 +44,16 @@
             @Html.ValidationMessageFor(a => a.Email)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.Phone)</td>
+            <th>Telefoon</th>
             <td>@Html.TextBoxFor(a => a.Phone)</td>
             @Html.ValidationMessageFor(a => a.Phone)
         </tr>
 
         <tr>
-            <th>Database Gegevens</th>
+            <th><h3>Database Gegevens</h3></th>
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.DbName)</td>
+            <th>Database Naam</th>
             <td>@Html.TextBoxFor(a => a.DbName)</td>
             @Html.ValidationMessageFor(a => a.DbName)
         </tr>
@@ -63,12 +63,12 @@
             @Html.ValidationMessageFor(a => a.DbLogin)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.DbPassword)</td>
+            <th>Dbwachtwoord</th>
             <td>@Html.PasswordFor(a => a.DbPassword)</td>
             @Html.ValidationMessageFor(a => a.DbPassword)
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.DbControlPassword)</td>
+            <th>Dbcontrolewachtwoord</th>
             <td>@Html.PasswordFor(a => a.DbControlPassword)</td>
             @Html.ValidationMessageFor(a => a.DbControlPassword)
         </tr>

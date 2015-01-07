@@ -6,27 +6,26 @@
     @Html.HiddenFor(a => a.OrganisationID)
     <table class="table">
         <tr>
-            <td>@Html.LabelFor(a => a.RegisterName)</td>
+            <th>Naam Kassa</th>
             <td>@Html.DropDownListFor(a => a.RegisterID, Model.NewRegister)</td>
             <td>@Html.ValidationMessageFor(a => a.RegisterID)</td>
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.FromDate)</td>
+            <th>Vanaf</th>
             <td><input type="date" value="@DateTime.Today" id="FromDate" name="FromDate" min="@DateTime.Today.Year-@DateTime.Today.Month-@DateTime.Today.Day" /></td>
             <td><input type="time" value="@DateTime.Today" id="FromTime" name="FromTime" /></td>
         </tr>
         <tr>
-            <td>@Html.LabelFor(a => a.UntilDate)</td>
+            <th>Tot</th>
             <td><input type="date" value="@DateTime.Today" id="UntilDate" name="UntilDate" min="@DateTime.Today.Year-@DateTime.Today.Month-@DateTime.Today.Day" /></td>
             <td><input type="time" value="@DateTime.Today" id="UntilTime" name="UntilTime" /></td>
         </tr>
         <tr>
-            <td>
+           </table>
                 <a href="/Vereniging/Index">
                     <input  class="btn-default" type="button" value="Back" />
                 </a>
-            </td>
-            <td><input class="btn-default" type="submit" value="Create" /></td>
-        </tr>
-    </table>
+            
+            <input class="btn-default" type="submit" value="Create" />
+        
 }

@@ -9,10 +9,10 @@
 <p><a href="/Kassa/NewRegister">Nieuwe kassa</a></p>
 <table class="table">
     <tr>
-        <td width="200px">@Html.LabelFor(a => a.RegisterName)</td>
-        <td width="200px">@Html.LabelFor(a => a.Device)</td>
-        <td width="200px">@Html.LabelFor(a => a.PurchaseDate)</td>
-        <td width="200px">@Html.LabelFor(a => a.ExpiresDate)</td>
+        <th>Kassa Naam</th>
+        <th>Toestel</th>
+        <th>Aankoop Datum</th>
+        <th>Verloopdatum</th>
     </tr>
     @foreach (var item in @ViewBag.Registers)
     {
